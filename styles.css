@@ -1,0 +1,52 @@
+body{
+	background: #f1f1f1;
+}
+
+.bar{
+	background: #e6faff;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin: 0px;
+}
+
+.dropdown-menu{
+	margin: 17px;
+	background: #262a34;
+	color: white;
+	box-shadow: 0 0 10px rgba(0,0,0,0.568);
+}
+
+.menuperfil{
+	color: white;
+}
+
+.menuperfil:focus{
+	background-color: #23ae6b;
+	box-shadow: 0 0 10px rgba(0,0,0,0.568);
+}
+
+.fechar:hover{
+	background-color: red;
+	box-shadow: 0 0 10px rgba(0,0,0,0.568);
+}
+
+.lateral{
+	background: #43758e;
+	color: #fff;
+	min-width: 250px;
+	min-height: 100vh;
+}
+
+.main{
+	background: #e9eced;
+}
+
+footer{
+	background: #e6faff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 19rem;
+        text-align: center;
+}
+
