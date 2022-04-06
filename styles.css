@@ -101,3 +101,33 @@ footer{
 #navbar-dropdown:hover{
 	text-decoration: none;
 }
+
+@media screen and (max-width:1300px){
+	.lateral{
+		min-width: auto;
+	}
+
+	.lateral .menu a span{
+		display: none;
+	}
+
+	.lateral .menu a i{
+		margin: 0;
+	}
+
+	.bar{
+		min-width: auto;
+	}
+
+	.dropdown-item__text{
+		display: none;
+	}
+
+	.dropdown-menu{
+		min-width: 5rem;
+	}
+
+	body{
+		font-size: 0.8rem;
+	}
+}

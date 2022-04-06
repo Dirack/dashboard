@@ -9,7 +9,7 @@
 	<!-- Bootstrap 4 -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-	<!-- Importar a fonte de ícones font awesome -->
+	<!-- Import font awesome icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<script src="https://kit.fontawesome.com/5b20eb1070.js" crossorigin="anonymous"></script>
@@ -31,7 +31,7 @@
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbar-dropdown">
 							<a href="#" class="dropdown-item menuperfil fechar">
-								<i class="fas fa-sign-out-alt m-1"></i>Sair
+								<i class="fas fa-sign-out-alt m-1"></i><span class="dropdown-item__text">Sair</span>
 							</a>
 						</div>
 					</li>
@@ -58,10 +58,10 @@
 		</div>
 	</div>
 
-	<footer id="footer" class="footer-media">
+	<footer id="footer" class="footer-media container-fluid">
 		<div class="container-fluid" >
 			<div class="row footer__message">
-				<div class="col-12">
+				<div class="col-sm-12">
 					<span>Get connected with us on social networks:</span>
 				</div>
 			</div>
@@ -70,13 +70,13 @@
 		<div class="container-fluid">
 			<div class="container footer-container">
 				<div class="row">
-					<div class="col-3">
+					<div class="col-sm-6 col-lg-3">
 						<h6 class="footer-title">Invision Geophysics</h6>
 						<p>Rua Barra do Piraí, 387 c1 - Jardim Mariléa, Rio das Ostras/RJ
 						Brasil CEP: 28895-895</p>
 					</div>
 
-					<div class="col-3">
+					<div class="col-sm-6 col-lg-3">
 						  <h6 class="footer-title">
 						    Products
 						  </h6>
@@ -94,7 +94,7 @@
 						  </p>
 					</div>
 
-					<div class="col-3">
+					<div class="col-sm-6 col-lg-3">
 						  <h6 class="footer-title">
 						    Useful links
 						  </h6>
@@ -112,7 +112,7 @@
 						  </p>
 					</div>
 
-					<div class="col-3">
+					<div class="col-sm-6 col-lg-3">
 						  <h6 class="footer-title">Contact</h6>
 						  <p><i class="fas fa-envelope me-3"></i> contato@invisiongeo.com.br
 						  </p>
@@ -129,8 +129,11 @@
 		</div>
 	</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+	<!-- Add JQuery -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+	<!-- Add Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
 	<script>
 		$(".page-button").bind("click",function(){
