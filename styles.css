@@ -1,23 +1,81 @@
-body{
-	background: #f1f1f1;
+/**********************************/
+/* 0. Variables
+/* 1. General styles
+/* 2. Navbar
+/* 3. Lateral
+/* 4. Main
+/* 5. Footer
+/**********************************/
+
+/**********************************/
+/* 0. Variables
+/**********************************/
+
+[data-theme="light"]{
+	--clr-background: #f1f1f1;
+	--clr-card: #e6faff;
+	--clr-lateral: #97bcce;
+	--clr-active: #cbdde7;
+	--clr-font: #111;
+	--clr-main: #e9eced;
+	--clr-switch-track:#AABBCC;
 }
 
+[data-theme="dark"]{
+	--clr-background: #111111;
+        --clr-card:#005c72;
+	--clr-lateral: #294757;
+	--clr-active: #497f9c;
+	--clr-font: #fff;
+	--clr-main: #73868c;
+	--clr-switch-track:#AABBCC;
+}
+
+/**********************************/
+/* 1. General styles
+/**********************************/
+
+body{
+	background: var(--clr-background);
+}
+
+footer{
+	background: var(--clr-card);
+        min-height: 19rem;
+        text-align: center;
+	padding-top: 10px;
+	color: var(--clr-font);
+}
+
+/**********************************/
+/* 2. Navbar
+/**********************************/
+
 .bar{
-	background: #e6faff;
+	background: var(--clr-card);
 	padding-top: 15px;
 	padding-bottom: 15px;
 	margin: 0px;
 }
 
+.logo-img{
+	width: 75px;
+	height: 50px;
+}
+
+#navbar-dropdown:hover{
+	text-decoration: none;
+}
+
 .dropdown-menu{
 	margin: 17px;
-	background: #262a34;
+	background: var(--clr-lateral);
 	color: white;
 	box-shadow: 0 0 10px rgba(0,0,0,0.568);
 }
 
 .menuperfil{
-	color: white;
+	color: var(--clr-font);
 }
 
 .menuperfil:focus{
@@ -30,18 +88,55 @@ body{
 	box-shadow: 0 0 10px rgba(0,0,0,0.568);
 }
 
+.switch{
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+}
+
+.switch__track{
+        background-color: var(--clr-switch-track);
+        display: block;
+        height: 1rem;
+        width: 2rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        margin: 0 .2rem;
+}
+
+.switch__track::before{
+        content:"";
+        background-color: var(--clr-font);
+        transition: var(--transition);
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 0.5rem;
+        position: relative;
+        left: 0rem;
+}
+
+.switch__track--dark::before{
+        left: 1rem;
+}
+
+
+/**********************************/
+/* 3. Lateral
+/**********************************/
+
 .lateral{
-	background: #43758e;
-	color: #fff;
+	background: var(--clr-lateral);
+	color: var(--clr-font);
 	min-width: 250px;
 	min-height: 100vh;
 	padding: 0;
-	border-bottom: 5px #fff solid;
+	border-bottom: 5px var(--clr-background) solid;
 }
 
 .lateral .menu a{
 	text-decoration: none;
-	color: #fff;
+	color: var(--clr-font);
 	display: block;
 	font: Roboto sans-serif;
 	padding: 20px;
@@ -51,33 +146,35 @@ body{
 
 .lateral .menu a:hover{
 	text-decoration: none;
-	background: #003c5d;
+	background: var(--clr-active);
+	/*background: #003c5d;*/
 }
 
 .active{
-	background: #003c5d;
+	background: var(--clr-active);
 }
 
 .lateral .menu{
-	border-top: 5px #fff solid;
+	border-top: 5px var(--clr-background) solid;
 }
 
 .lateral .menu a i{
 	margin-right: 20px;
 }
 
+/**********************************/
+/* 4. Main
+/**********************************/
+
 .main{
-	background: #e9eced;
-	border-top: 5px #fff solid;
-	border-bottom: 5px #fff solid;
+	background: var(--clr-main);
+	border-top: 5px var(--clr-background) solid;
+	border-bottom: 5px var(--clr-background) solid;
 }
 
-footer{
-	background: #e6faff;
-        min-height: 19rem;
-        text-align: center;
-	padding-top: 10px;
-}
+/**********************************/
+/* 5. Footer
+/**********************************/
 
 .footer__message{
 	text-align: left;
@@ -93,22 +190,10 @@ footer{
 	text-transform: uppercase;
 }
 
-.logo-img{
-	width: 75px;
-	height: 50px;
-}
-
-#navbar-dropdown:hover{
-	text-decoration: none;
-}
 
 @media screen and (max-width:1300px){
 	.lateral{
 		min-width: auto;
-	}
-
-	.lateral .menu a span{
-		display: none;
 	}
 
 	.lateral .menu a i{

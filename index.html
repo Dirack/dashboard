@@ -23,9 +23,15 @@
 				<img src="logo_m2s.png" class="logo-img">
 				<!--<h4 class="text-dark">Logo</h4>-->
 			</div>
-			<div class="col-4 text-right bar">
-				<ul class="navbar-nav mr-auto">
-					<li>
+			<div class="col-4 text-right bar d-flex justify-content-end">
+				<div class="row">
+				<div class="switch" style="margin-right:20px">
+					<i class="fas fa-sun"></i>
+					<span class="switch__track"></span>
+					<i class="fas fa-moon"></i>
+				</div>
+				<ul class="navbar-nav mr-auto list-inline d-flex">
+					<li class="list-inline-item">
 						<a href="#" class="px-3 text-dark perfil dropdown-toggle" id="navbar-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fa-solid fa-circle-user fa-3x"></i>
 						</a>
@@ -36,6 +42,7 @@
 						</div>
 					</li>
 				</ul>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -43,13 +50,13 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="lateral col-12 col-sm-auto">
-				<nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
-					<a href="#" data-page="0" class="page-button active"><i class="fas fa-home"></i><span>Home</span></a>
-					<a href="#" data-page="1" class="page-button"><i class="fa-solid fa-tower-broadcast"></i><span>Interferometry</span></a>
-					<a href="#" data-page="2" class="page-button"><i class="fa-solid fa-wave-square"></i><span>Wave Picking</span></a>
-					<a href="#" data-page="3" class="page-button"><i class="fa-solid fa-list"></i><span>Event List</span></a>
-					<a href="#" data-page="4" class="page-button"><i class="fa-solid fa-file-waveform"></i><span>Field Report</span></a>
-					<a href="#" data-page="5" class="page-button"><i class="fa-solid fa-earth-americas"></i><span>Cesium Ion</span></a>
+				<nav class="menu d-block d-sm-block justify-content-center flex-wrap">
+					<a href="#" data-page="0" class="page-button active"><i class="fas fa-home"></i><span> Home</span></a>
+					<a href="#" data-page="1" class="page-button"><i class="fa-solid fa-tower-broadcast"></i><span> Interferometry</span></a>
+					<a href="#" data-page="2" class="page-button"><i class="fa-solid fa-wave-square"></i><span> Wave Picking</span></a>
+					<a href="#" data-page="3" class="page-button"><i class="fa-solid fa-list"></i><span> Event List</span></a>
+					<a href="#" data-page="4" class="page-button"><i class="fa-solid fa-file-waveform"></i><span> Field Report</span></a>
+					<a href="#" data-page="5" class="page-button"><i class="fa-solid fa-earth-americas"></i><span> Cesium Ion</span></a>
 				</nav>
 			</div>
 			<main class="main col">
@@ -141,5 +148,20 @@
 			$(this).toggleClass("active");
 		});
 	</script>
+
+	<!-- Navbar switch track to light and dark mode -->
+        <script>
+                $(".switch__track").bind("click",function(){
+                        $(this).toggleClass("switch__track--dark");
+                        if($(this).is(".switch__track--dark")){
+                                $("html").attr("data-theme","dark");
+				$('#navbar-dropdown').removeClass('text-dark').addClass('text-light');
+                        }else{
+                                $("html").attr("data-theme","light");
+				$('#navbar-dropdown').removeClass('text-light').addClass('text-dark');
+                        }
+                });
+        </script>
+
 </body>
 </html>
